@@ -9,4 +9,7 @@
   .iconwithName {
     @apply flex font-medium space-x-2 hover:text-gray-300 items-center;
   }
+  .postIcon {
+    @apply h-6 cursor-pointer hover:text-gray-500;
+  }
 }

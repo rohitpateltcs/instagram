@@ -1,9 +1,15 @@
-import { EllipsisHorizontalIcon } from "@heroicons/react/24/outline";
+import {
+  BookmarkIcon,
+  ChatBubbleOvalLeftIcon,
+  EllipsisHorizontalIcon,
+  HeartIcon,
+  PaperAirplaneIcon,
+} from "@heroicons/react/24/outline";
 import React from "react";
 
 const RealPost = () => {
   return (
-    <div className="border-2 mx-2 rounded-sm">
+    <div className="border-2 mx-2 rounded-sm mb-4">
       {/* Real Post header */}
       <div className="flex justify-between p-2">
         <div className="flex space-x-4">
@@ -27,17 +33,55 @@ const RealPost = () => {
           <EllipsisHorizontalIcon className="h-6" />
         </div>
       </div>
+
+      {/* Real post Image */}
       <div>
         <img
           src="https://images.unsplash.com/photo-1559563362-c667ba5f5480?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cm9zZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
           alt=""
-          className="w-full h-96"
+          className="w-full h-[430px]"
         />
       </div>
-      {/* Real post Image */}
       {/* Real post icons */}
-      {/* Real post Likes */}
-      {/* Real post description  and View all comment*/}
+
+      <div className="p-2">
+        <div className="flex justify-between items-center">
+          <div className="flex space-x-4">
+            <HeartIcon className="postIcon" />
+            <ChatBubbleOvalLeftIcon className="postIcon" />
+            <PaperAirplaneIcon className="postIcon" />
+          </div>
+          <div>
+            <BookmarkIcon className="postIcon" />
+          </div>
+        </div>
+        {/* Real post Likes */}
+        {/* Real post description  and View all comment*/}
+        <div className="">
+          <div>
+            <p className="space-x-1">
+              <span className="font-medium ">123154</span>
+              <span className="text-gray-700">Likes</span>
+            </p>
+          </div>
+          <div>
+            <p>
+              <span className="font-bold text-sm">critinao</span> The confort of
+              being able to wear on any occasion is real
+            </p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <p>View all 77456 comments</p>
+          </div>
+          <div>
+            <span className="font-medium text-sm">rickiden</span> Lets go you
+            are greatest all time
+          </div>
+        </div>
+      </div>
+
       {/* Comment */}
       {/* Input comment */}
     </div>
