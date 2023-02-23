@@ -1,6 +1,20 @@
-import React from "react";
+//https://my-json-server.typicode.com/horizon-code-academy/fake-movies-api/movies
 
-const PostStatus = () => {
+import Status from "./Status";
+
+const getStatus = async () => {
+  const res = await fetch(
+    `https://my-json-server.typicode.com/horizon-code-academy/fake-movies-api/movies`
+  );
+
+  const result = await res.json();
+  console.log(result);
+  return result;
+};
+
+const PostStatus = async () => {
+  const data = await getStatus();
+
   return (
     <div className="p-4 rounded-md flex border-2 mx-2 my-4">
       <div>
@@ -11,22 +25,13 @@ const PostStatus = () => {
         />
       </div>
       <div className="flex space-x-2 overflow-x-scroll">
-        <h1>post</h1>
-        <h1>post</h1>
-        <h1>post</h1>
-        <h1>post</h1>
-        <h1>post</h1>
-        <h1>post</h1>
-        <h1>post</h1>
-        <h1>post</h1>
-        <h1>post</h1>
-        <h1>post</h1>
-        <h1>post</h1>
-        <h1>post</h1>
-        <h1>post</h1>
-        <h1>post</h1>
-        <h1>post</h1>
-        <h1>post</h1>
+        {data.map((Userstatus) => (
+          <Status
+            statusimg={Userstatus.Poster}
+            title={Userstatus.Title}
+            className=""
+          />
+        ))}
       </div>
     </div>
   );
